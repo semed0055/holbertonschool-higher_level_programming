@@ -1,1 +1,1 @@
-Python Hello World project
+Python basics project
