@@ -20,7 +20,7 @@ class BaseGeometry:
         Validates value as a positive integer.
 
         Args:
-            name (str): The name of the value (always a string).
+            name (str): The name of the value.
             value (int): The value to validate.
 
         Raises:
