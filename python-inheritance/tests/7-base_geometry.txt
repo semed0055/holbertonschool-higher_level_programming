@@ -1,13 +1,45 @@
+=============================
+How to use 7-base_geometry
+=============================
+
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Instantiate BaseGeometry:
 >>> bg = BaseGeometry()
->>> bg.integer_validator("age", 20)
+
+Test area():
 >>> try:
-...     bg.integer_validator("age", "20")
+...     bg.area()
+... except Exception as e:
+...     print(e)
+area() is not implemented
+
+Test integer_validator with valid input:
+>>> bg.integer_validator("my_int", 12)
+>>> bg.integer_validator("width", 89)
+
+Test integer_validator with invalid types (TypeError):
+>>> try:
+...     bg.integer_validator("name", "John")
+... except TypeError as e:
+...     print(e)
+name must be an integer
+
+>>> try:
+...     bg.integer_validator("age", 13.5)
 ... except TypeError as e:
 ...     print(e)
 age must be an integer
+
+Test integer_validator with invalid values (ValueError):
 >>> try:
 ...     bg.integer_validator("age", 0)
 ... except ValueError as e:
 ...     print(e)
 age must be greater than 0
+
+>>> try:
+...     bg.integer_validator("distance", -4)
+... except ValueError as e:
+...     print(e)
+distance must be greater than 0
