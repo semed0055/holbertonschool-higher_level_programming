@@ -1,1 +1,1 @@
-Python Inheritance and Object Lookup
+Learning Python Inheritance

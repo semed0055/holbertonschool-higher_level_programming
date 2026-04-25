@@ -1,31 +1,25 @@
 #!/usr/bin/python3
 """
-Module defining the BaseGeometry class.
+Bu modul BaseGeometry klassını təyin edir.
 """
 
 
 class BaseGeometry:
-    """
-    A class representing base geometry.
-    """
+    """Həndəsi fiqurlar üçün əsas klass."""
 
     def area(self):
-        """
-        Public instance method that raises an Exception.
-        """
+        """Sahəni hesablamaq üçün metod (hələ tətbiq edilməyib)."""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """
-        Validates value as a positive integer.
+        """Dəyərin tam ədəd olub-olmadığını yoxlayır.
 
         Args:
-            name (str): The name of the value.
-            value (int): The value to validate.
-
+            name (str): Parametrin adı.
+            value (int): Yoxlanılacaq dəyər.
         Raises:
-            TypeError: if value is not an integer.
-            ValueError: if value is <= 0.
+            TypeError: Əgər value integer deyilsə.
+            ValueError: Əgər value <= 0-dırsa.
         """
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
